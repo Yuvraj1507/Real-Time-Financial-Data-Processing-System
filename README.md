@@ -23,22 +23,51 @@ The **Cloud-Native Banking Application** is a scalable, microservices-based fina
 - **CI/CD**: GitHub Actions
 - **Cloud**: AWS (EKS, S3, RDS)
 
-## 📂 Project Structure
+# Cloud-Native-Banking-App Folder Structure
+
 ```
-📦 cloud-native-banking
-├── 📂 backend
-│   ├── 📂 auth-service
-│   ├── 📂 transaction-service
-│   ├── 📂 notification-service
-│   └── 📂 api-gateway
-├── 📂 frontend
-│   ├── 📂 react-ui
-├── 📂 deployment
-│   ├── 📜 docker-compose.yml
-│   ├── 📜 k8s-deployment.yaml
-│   ├── 📜 helm-chart/
-└── 📜 README.md
+Cloud-Native-Banking-App-master/
+│── README.md
+│── .idea/                        # IDE project settings
+│── accounts/                     # Accounts microservice
+│   │── Dockerfile
+│   │── mvnw
+│   │── mvnw.cmd
+│   │── pom.xml                    # Maven configuration
+│   │── .mvn/wrapper/              # Maven wrapper files
+│   │── src/
+│   │   ├── main/java/com/eazybytes/accounts/
+│   │   │   ├── controller/        # REST controllers
+│   │   │   ├── dto/               # Data Transfer Objects
+│   │   │   ├── entity/            # Database entities
+│   │   │   ├── exception/         # Exception handling
+│   │   │   ├── repository/        # Database repositories
+│   │   │   ├── service/           # Business logic
+│   │   │   ├── service/Feign/     # Feign clients for inter-service communication
+│   │   ├── main/resources/
+│   │   │   ├── application.yml    # Configuration file
+│   │   │   ├── schema.sql         # Database schema
+│   │   ├── test/java/com/eazybytes/accounts/  # Unit tests
+│   │── target/                    # Compiled output
+│
+│── cards/                         # Cards microservice (similar structure)
+│── configserver/                   # Configuration server
+│   │── src/main/resources/config/  # Config files for microservices
+│
+│── docker-compose/                 # Docker configurations
+│   │── default/
+│   │── observability/               # Monitoring & logging
+│   │── prod/
+│   │── qa/
+│
+│── eurekaserver/                    # Service discovery (Eureka)
+│── gatewayserver/                    # API Gateway
+│── loans/                            # Loans microservice
+│── message/                          # Message processing service
 ```
+
+Each microservice follows a similar structure with controllers, DTOs, entities, services, repositories, and configuration files.
+
 
 ## 🚀 Installation & Setup
 ### Prerequisites
