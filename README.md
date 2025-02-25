@@ -83,5 +83,5 @@ The **Cloud-Native Banking Application** is a scalable, microservices-based fina
 Fork the repo, create a feature branch, and submit a PR.
 
 ---
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Dalayi Yuvaraju]
 
